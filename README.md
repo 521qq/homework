@@ -1,9 +1,10 @@
 # Question 1
 ## start the server
 ```bash
-yarn start
+make install;
+make;
 ```
 ## run test
 ```bash
-yarn test
+make test
 ```
