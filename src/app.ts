@@ -55,7 +55,8 @@ app.get('/months', (req: Request, res: Response) => {
     // console.log('current month1', currentDate.month());
     // console.log('to push', currentDate.format(), '' + currentDate.utc().format());
     // console.log('current month2', currentDate.month());
-    monthStarts.push(currentDate.utc().format());
+    const item = currentDate.utc().format();
+    monthStarts.push(item.slice(0, item.length - 1) + '.000Z');
     // console.log('next', nextMonth);
     const nextYear = nextMonth > 11 ? thisYear + 1 : thisYear;
     currentDate = moment.tz(
